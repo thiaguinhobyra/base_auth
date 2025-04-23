@@ -31,6 +31,20 @@ public class Usuario {
     @Column(name = "MATRICULA", nullable = false)
     private String matricula;
 
+    public Usuario(Usuario usuario) {
+        this.id = usuario.id;
+        this.nome = usuario.nome;
+        this.email = usuario.email;
+        this.senha = usuario.senha;
+        this.status = usuario.status;
+        this.perfil = usuario.perfil;
+        this.cpf = usuario.cpf;
+        this.matricula = usuario.matricula;
+    }
+
+    public Usuario() {
+    }
+
     public Long getId() {
         return id;
     }
